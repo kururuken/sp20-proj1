@@ -31,7 +31,7 @@ cd /cs186
 Clone this repo. **Make sure you do this inside the container, *especially* if
 you are on Windows.**
 ```bash
-git clone https://github.com/berkeley-cs186/sp20-hw1.git
+git clone https://github.com/berkeley-cs186/sp20-proj1.git
 ```
 
 If you get an error like
@@ -40,11 +40,11 @@ container and run `docker-machine restart`) or restarting your computer.
 
 Now, navigate into the newly created directory:
 ```bash
-cd sp20-hw1
+cd sp20-proj1
 ```
 
 Now, you should be ready to start this project. Note that any changes you make inside
-the new `/cs186/sp20-hw1` directory will be saved in your machine's filesystem, but
+the new `/cs186/sp20-proj1` directory will be saved in your machine's filesystem, but
 they will not be backed up in any way. You are responsible to ensure the
 safety of your files by backing them up somehow, as discussed in HW0.
 
@@ -171,11 +171,11 @@ For more detailed information, see the [docs online](http://www.seanlahman.com/f
 
 ## Writing Queries
 
-We've provided a skeleton solution file, `hw1.sql`, to help you get started. In the file, you'll find a `CREATE VIEW` statement for each part of the first 4 questions below, specifying a particular view name (like `q2i`) and list of column names (like `playerid`, `lastname`). The view name and column names constitute the interface against which we will grade this assignment. In other words, *don't change or remove these names*. Your job is to fill out the view definitions in a way that populates the views with the right tuples.
+We've provided a skeleton solution file, `proj1.sql`, to help you get started. In the file, you'll find a `CREATE VIEW` statement for each part of the first 4 questions below, specifying a particular view name (like `q2i`) and list of column names (like `playerid`, `lastname`). The view name and column names constitute the interface against which we will grade this assignment. In other words, *don't change or remove these names*. Your job is to fill out the view definitions in a way that populates the views with the right tuples.
 
 For example, consider Question 0: "What is the highest `era` ([earned run average](https://en.wikipedia.org/wiki/Earned_run_average)) recorded in baseball history?".
 
-In the `hw1.sql` file we provide:
+In the `proj1.sql` file we provide:
 
 	CREATE VIEW q0(era) AS
         SELECT 1 -- replace this line
@@ -265,7 +265,7 @@ You may need to reference SQL documentation for concepts not covered in class: [
 ## Submitting the Assignment
 
 See [the main readme](https://github.com/berkeley-cs186/sp20-moocbase/blob/master/README.md#submitting-projects) for submission instructions.
-The project number for this project is hw1.
+The project number for this project is proj1.
 
 Congratulations! You finished your first project!
 
@@ -273,13 +273,13 @@ Congratulations! You finished your first project!
 
 You can run your answers through postgres directly using:
 
-	ubuntu@3c0823881763:/$ psql baseball < hw1.sql
+	ubuntu@3c0823881763:/$ psql baseball < proj1.sql
 
 This can help you catch any syntax errors in your SQL.
 
 To help debug your logic, we've provided output from each of the views you need to define in questions 1-4 for the data set you've been given.  Your views should match ours, but note that your SQL queries should work on ANY data set. **We will test your queries on a (set of) different database(s), so it is *NOT* sufficient to simply return these results in all cases!**
 
-To run the test, from within the `hw1` directory:
+To run the test, from within the `proj1` directory:
 
 	ubuntu@3c0823881763:/$ ./test.sh
 
