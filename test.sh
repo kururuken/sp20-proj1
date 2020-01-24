@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HW_FILE=${1-hw1.sql}
+PROJ_FILE=${1-proj1.sql}
 DATASET_NAME=${2-baseball}
 : ${EXPECTED_OUTPUT:=expected_output}
 : ${QUERIES:=all}
@@ -11,7 +11,7 @@ mkdir your_output 2>/dev/null
 rm -rf diffs 2>/dev/null
 mkdir diffs 2>/dev/null
 
-psql -E -d "$DATASET_NAME" < "$HW_FILE" >&2
+psql -E -d "$DATASET_NAME" < "$PROJ_FILE" >&2
 
 pass=true
 
