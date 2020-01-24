@@ -1,19 +1,20 @@
-# Homework 1: SQL queries and Scalable Algorithms
+# Project 1: SQL queries and Scalable Algorithms
 
-This homework is due: **Friday, 2/7/2020, 11:59 PM**.
+This project is due: **Friday, 2/7/2020, 11:59 PM**.
 
 ## Overview
 
-In this homework, we will exercise your newly acquired SQL skills. You will be writing queries against Postgres using public data.
+In this project, we will exercise your newly acquired SQL skills. You will be writing queries against Postgres using public data.
+The documentation for the version of postgres we are using is at https://www.postgresql.org/docs/9.5/app-psql.html.
 
 ## Prerequisites
 
 You should watch both the SQL I and SQL II lectures before working on this
-homework.
+project.
 
 ## Fetching the Skeleton Code
 
-This homework assumes you have gone through and completed HW0. See
+This project assumes you have gone through and completed HW0. See
 [the HW0 README](https://github.com/berkeley-cs186/sp20-moocbase/blob/master/hw0-README.md) if you have not completed
 HW0.
 
@@ -42,7 +43,7 @@ Now, navigate into the newly created directory:
 cd sp20-hw1
 ```
 
-Now, you should be ready to start this homework. Note that any changes you make inside
+Now, you should be ready to start this project. Note that any changes you make inside
 the new `/cs186/sp20-hw1` directory will be saved in your machine's filesystem, but
 they will not be backed up in any way. You are responsible to ensure the
 safety of your files by backing them up somehow, as discussed in HW0.
@@ -120,7 +121,7 @@ results, or the spacebar to page through the results (much like the UNIX [`less`
 
 Your databases are being created inside the docker container, so **be aware that any database you create in a container, or any changes you make to the `baseball` database, will be reverted when you terminate the container.**
 
-This is an unusual way to set up a docker container for a database, but good for our read-only uses in this homework.
+This is an unusual way to set up a docker container for a database, but good for our read-only uses in this project.
 
 One aspect of this approach is that any SQL `CREATE VIEW` statements you may make for convenience will be lost if you
 terminate the contianer (which you may need to do if something goes wrong: see 
@@ -134,7 +135,7 @@ always reload those commands into `psql` like this:
 
 ## Understanding the Schema
 
-In this homework we will be working with the commonly-used [Lahman baseball statistics database](http://www.seanlahman.com/baseball-archive/statistics/). (Our friends at the San Francisco Giants tell us they use it!) The database contains pitching, hitting, and fielding statistics for Major League Baseball from 1871 through 2017.  It includes data from the two current leagues (American and National), four other "major" leagues (American Association, Union Association, Players League, and Federal League), and the National Association of 1871-1875.
+In this project we will be working with the commonly-used [Lahman baseball statistics database](http://www.seanlahman.com/baseball-archive/statistics/). (Our friends at the San Francisco Giants tell us they use it!) The database contains pitching, hitting, and fielding statistics for Major League Baseball from 1871 through 2017.  It includes data from the two current leagues (American and National), four other "major" leagues (American Association, Union Association, Players League, and Federal League), and the National Association of 1871-1875.
 
 The database is comprised of the following main tables:
 
@@ -189,7 +190,7 @@ You would edit this with your answer, keeping the schema the same:
 	;
 
 
-To complete the homework, create a view for `q0` as above (via [copy-paste](http://i0.kym-cdn.com/photos/images/original/000/005/713/copypasta.jpg)), and for all of the following queries, which you will need to write yourself.
+To complete the project, create a view for `q0` as above (via [copy-paste](http://i0.kym-cdn.com/photos/images/original/000/005/713/copypasta.jpg)), and for all of the following queries, which you will need to write yourself.
 
 You may need to reference SQL documentation for concepts not covered in class: [reference](https://www.postgresql.org/docs/10/static.sql.html)
 
@@ -251,6 +252,8 @@ You may need to reference SQL documentation for concepts not covered in class: [
 
        *Note*: The `high` value for bin 9 may be inclusive).
 
+       *Note*: ```generate_series``` may be useful for this part. The documentation can be found at https://www.postgresql.org/docs/9.1/functions-srf.html.
+
     3. Now let's compute the Year-over-Year change in min, max and average player salary. For each year with recorded salaries after the first, return the `yearid`, `mindiff`, `maxdiff`, and `avgdiff` with respect to the previous year. Order the output by `yearid` in *ascending* order. (You should omit the very first year of recorded salaries from the result.)
 
     4. In 2001, the max salary went up by over $6 million. Write a query to find the players that had the max salary in 2000 and 2001. Return the `playerid`, `namefirst`, `namelast`, `salary` and `yearid` for those two years. If multiple players tied for the max salary in a year, return all of them.
@@ -261,10 +264,10 @@ You may need to reference SQL documentation for concepts not covered in class: [
 
 ## Submitting the Assignment
 
-See [the main readme](https://github.com/berkeley-cs186/sp20-moocbase/blob/master/README.md#submitting-homeworks) for submission instructions.
-The homework number for this homework is hw1.
+See [the main readme](https://github.com/berkeley-cs186/sp20-moocbase/blob/master/README.md#submitting-projects) for submission instructions.
+The project number for this project is hw1.
 
-Congratulations! You finished your first homework!
+Congratulations! You finished your first project!
 
 ## Testing
 
