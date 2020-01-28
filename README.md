@@ -192,7 +192,7 @@ You would edit this with your answer, keeping the schema the same:
 
 To complete the project, create a view for `q0` as above (via [copy-paste](http://i0.kym-cdn.com/photos/images/original/000/005/713/copypasta.jpg)), and for all of the following queries, which you will need to write yourself.
 
-You may need to reference SQL documentation for concepts not covered in class: [reference](https://www.postgresql.org/docs/10/static.sql.html)
+You may need to reference SQL documentation for concepts not covered in class: [reference](https://www.postgresql.org/docs/9.5/app-psql.html)
 
 1. **Basics**
     1. In the `people` table, find the `namefirst`, `namelast` and `birthyear` for all players with weight greater than 300 pounds.
